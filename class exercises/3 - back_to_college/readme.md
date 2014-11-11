@@ -25,7 +25,7 @@
 - Once you have full CRUD, allow students to enroll for multiple courses. 
 - The student should see a list of all of the courses as checkboxes and choose whichever ones they want to sign up for
 - If a Student has already signed up for the course, ensure there are no duplicates
-- If a student unchecks an existing course, make sure to remove it from the enrollments table
+- If a student unchecks an existing course, make sure to remove it from the enrollments table **elaborate**
 - __this is going to be challenging__ so do not get discouraged if you can not solve it - we will review how this is done.
 - If you have done this, for each student, show their enrollments and for each course, show their students.
 
