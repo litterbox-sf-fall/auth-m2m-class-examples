@@ -3,19 +3,19 @@
 # Your Task
 
 - Build a form for a user to signup. The user should have a username and password and the password should not be stored in plain text
-- Once signed up the user should have their id set in the session and be routed to a welcome page (which can only be accessed by someone who has a session[:user_id])
-- The user should be able to login as well
-- Once signed up, the user should be able to log out and be routed to the 
+- Once signed up the user should have their id set in the session and then be routed to a welcome page (that can only be accessed by someone who has a session[:user_id])
+- The user should also be able to login
+- If logged in, the user should be able to log out and be routed to the login page
 
 ### Getting started
 
 - Create a new rails app `rails new `
 - in your Gemfile add `pry-rails` and run bundle
 - generate a User model with a username, password and password_digest
-- in your user model add has_secure_password
+- in your user model add `has_secure_password`
 - validate the presence of a username and make sure it is unique as well
-- add the flash code to your application.html.erb (from the todosession exercise)
-- generate a controller called access with a signup login home and logout action
+- add the flash code to your application.html.erb (reference the todosession exercise)
+- generate a controller called access with a signup login, home, and logout action
 - replace your routes with the following:
 
 ```
@@ -77,7 +77,7 @@ private
 
 - you should be able to render the signup form. If that works, finish up the create action.
 - In the create action you should create a user with the permitted parameters. 
-- If the user has saved successfully, assign the session[:user_id] to the instance of the user you just created and redirect to the home_path 
+- If the user has saved successfully, assign the `session[:user_id]` to the instance of the user you just created and redirect to the home_path 
 
 ## Finishing up
 
@@ -114,11 +114,11 @@ private
 
 This code will check and see if a user has been found, and if so it will call the authenticate method to see if the password typed in was correct. 
 
-- You need to finish writing this method by rendering certain actions when found_user and authorized_user are not correct. Finally, if both of these return true, the user can be logged in. 
+- You need to finish writing this method by rendering certain actions when `found_user` and `authorized_user` are not correct. Finally, if both of these return true, the user can be logged in. 
 
 - Display a flash message for each error and success
 
-- Write a method for your logout action. This should set the session[:user_id] to nil and redirect the user to the login page. Display a flash message notifying the user that they have signed out successfully. 
+- Write a method for your logout action. This should set the `session[:user_id]` to `nil` and redirect the user to the login page. Display a flash message notifying the user that they have signed out successfully. 
 
 
 ## Bonus
